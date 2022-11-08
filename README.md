@@ -11,4 +11,4 @@ The paper is available on:
 1) https://onepetro.org/SPEADIP/proceedings-abstract/22ADIP/2-22ADIP/D022S165R002/513410
 2) DOI: https://doi.org/10.2118/211804-MS
 
-**For the sake of research, please feel free to contact me on osama.abdelaziem@gmail.com in order to obtain a copy of the trained model.**
+***For the sake of research, please feel free to contact me on osama.abdelaziem@gmail.com in order to obtain a copy of the trained model.***
