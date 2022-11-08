@@ -1,0 +1,13 @@
+# It is why we do AI, not how we do it.
+This paper was developed to contribute to the previous research in the same area and overcome the existing obstacles.
+
+## Constraints of previous work:
+1) Pretermitting the mechanism of bottom-water coning.
+2) Ineffectiveness with noisy production data.
+3) Inability to do consistent segmentation.
+
+## How did we tackle the challenges?
+1) Constructed large public dataset (10,000 wells).
+2) Removed anomalies using ML and statistics.
+3) Employed Computer vision to segment multiple Chan patterns.
+4) In addition, we deployed the model on production.
