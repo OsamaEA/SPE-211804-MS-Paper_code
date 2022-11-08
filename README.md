@@ -1,7 +1,7 @@
 # SPE-211804-MS-Paper_code
 
 This repository includes the source code of SPE paper titled "Application of Computer Vision in Diagnosing Water Production Mechanisms in Oil Wells".\
-The code is 100 % written in Python and is subject to MIT license.\
+The code is 100 % written in Python and is subject to MIT license.
 
 The paper was presented in ADIPEC "Abu Dhabi International Petroleum Exhibition and Conference" 2022 on day 2, Nov 01.
 
