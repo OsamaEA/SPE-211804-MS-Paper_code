@@ -37,15 +37,15 @@ def arguments():
 
 def create_missing_columns(df):
     # In case the online days in month are not given, we assume they produce everyday
-    if 'days' not in df.columns:
-        df.loc[:, 'days'] = df.loc[:, 'report_date'].dt.days_in_month
+    if 'production_online_days' not in df.columns:
+        df.loc[:, 'production_online_days'] = df.loc[:, 'report_date'].dt.days_in_month
     # Daily Rates Calculations assuming monthly productions are the only givens
     if 'qo_bpd' not in df.columns:
-        df.loc[:, 'qo_bpd']    = df.loc[:, 'monthly_produced_oil'] / df.loc[:, 'days']
+        df.loc[:, 'qo_bpd']    = df.loc[:, 'monthly_produced_oil'] / df.loc[:, 'production_online_days']
     if 'qw_bpd' not in df.columns:
-        df.loc[:, 'qw_bpd']  = df.loc[:, 'monthly_produced_water'] / df.loc[:, 'days']
+        df.loc[:, 'qw_bpd']  = df.loc[:, 'monthly_produced_water'] / df.loc[:, 'production_online_days']
     if 'qg_mscfd' not in df.columns:
-        df.loc[:, 'qg_mscfd']    = df.loc[:, 'monthly_produced_gas'] / df.loc[:, 'days']
+        df.loc[:, 'qg_mscfd']    = df.loc[:, 'monthly_produced_gas'] / df.loc[:, 'production_online_days']
     if 'ql_bpd' not in df.columns:
         df.loc[:, 'ql_bpd']  = df.loc[:, 'qo_bpd'] + df.loc[:, 'qw_bpd']
     # Other Caclucations
@@ -116,7 +116,7 @@ def processing_well_data(df_pre_processed, wellname):
     # Setting the first day of production as day number one
     well.loc[0, 'producing_days'] = 1
     # Setting name of online producction days
-    well.rename(columns= {'days': 'online_days'}, inplace = True)
+    well.rename(columns= {'production_online_days': 'online_days'}, inplace = True)
 
     # Cumulative calculations
     well['cumulative_oil_production'] = (well['qo_bpd']*well['online_days']).cumsum()
