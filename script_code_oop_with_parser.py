@@ -274,7 +274,7 @@ class Chan_plots():
         df = clean_data(df)
         return (df)
 
-    def rearrange_dataset(self):
+    def dataset_wrangling(self):
         '''
             This function is to extract full dataset re-arranged indexed with days of production
                                                                                                                         '''
@@ -298,7 +298,7 @@ class Chan_plots():
         '''
             This function returns clean dataset where outliers are removed
                                                                                                                     '''
-        df = self.rearrange_dataset()
+        df = self.dataset_wrangling()
         clean_wells = []
         for i, well_name in enumerate(df.columns.get_level_values(0).unique().tolist()):
             # New dataframe for each well & replace inf
@@ -404,7 +404,7 @@ if __name__ == '__main__':
     elif arguments().action_required == 'get_clean_dataset':
         Chan_plots().extract_clean_data()
     elif arguments().action_required == 'arrange_dataset':
-        Chan_plots().rearrange_dataset()
+        Chan_plots().dataset_wrangling()
     elif arguments().action_required == 'pre_process_dataset':
         Chan_plots().pre_process()
     elif arguments().action_required == 'read_dataset':
