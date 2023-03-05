@@ -1,0 +1,5 @@
+This slide shows how the model should work. 
+
+Input is usually one excel sheet that includes production data for several wells in your field. Next, you could use the user-friendly layout to remove anomalies and
+plot Chan patterns with interpretation for each segment
+Output should eb images in addition to an excel sheet that shows all cases that a well exhibited with start_date - end_date - confidence_score
